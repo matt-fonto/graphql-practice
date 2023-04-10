@@ -8,8 +8,8 @@ const UserList = [
     friends: [
       {
         id: 2,
-        name: "Pedro",
-        username: "PedroTech",
+        name: "Matt",
+        username: "MattFonto",
         age: 20,
         nationality: "BRAZIL",
       },
@@ -24,8 +24,8 @@ const UserList = [
   },
   {
     id: 2,
-    name: "Pedro",
-    username: "PedroTech",
+    name: "Matt",
+    username: "MattFonto",
     age: 20,
     nationality: "BRAZIL",
   },
@@ -38,8 +38,8 @@ const UserList = [
     friends: [
       {
         id: 2,
-        name: "Pedro",
-        username: "PedroTech",
+        name: "Matt",
+        username: "MattFonto",
         age: 20,
         nationality: "BRAZIL",
       },
@@ -64,26 +64,26 @@ const UserList = [
 const MovieList = [
   {
     id: 1,
-    name: "Avengers Endgame",
-    yearOfPublication: 2019,
-    isInTheaters: true,
+    title: "2001: A Space Odyssey",
+    yearOfPublication: 1968,
+    isInTheaters: false,
   },
   {
     id: 2,
-    name: "Interstellar",
-    yearOfPublication: 2007,
-    isInTheaters: true,
+    title: "Interstellar",
+    yearOfPublication: 2014,
+    isInTheaters: false,
   },
   {
     id: 3,
-    name: "Superbad",
-    yearOfPublication: 2009,
-    isInTheaters: true,
+    title: "Inception",
+    yearOfPublication: 2010,
+    isInTheaters: false,
   },
   {
     id: 4,
-    name: "PedroTech The Movie",
-    yearOfPublication: 2035,
+    title: "Fight Club",
+    yearOfPublication: 1999,
     isInTheaters: false,
   },
 ];
