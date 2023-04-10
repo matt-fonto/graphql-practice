@@ -1,7 +1,9 @@
 const { UserList, MovieList } = require("../fakeData");
+const _ = require("lodash");
 
+// resolvers = function that will be executed when a query is made
 const resolvers = {
-  //QUERY RESOLVERS
+  //QUERY RESOLVERS, GET
   Query: {
     //USER RESOLVERS
     //users(): it is the function that will be executed when a query is made
@@ -29,33 +31,42 @@ const resolvers = {
       return MovieList.filter((movie) => movie.yearOfPublication < 2000);
     },
   },
-  // MUTATION RESOLVERS
+  // MUTATION RESOLVERS, ADD, UPDATE, DELETE
   Mutation: {
     // createUser: we add a user to the list
     createUser: (parent, args) => {
+      // user: it is the object that will be added to the list
       const user = args.input;
+      // we get the last id of the list and we add 1 to it
       const lastId = UserList[UserList.length - 1].id;
+      // we add the new id to the user
       user.id = lastId + 1;
 
+      // we add the user to the list
       UserList.push(user);
+
+      // we return the user
+      return user;
+    },
+    // updateUsername: we update the username of a user
+    updateUsername: (parent, args) => {
+      const { id, newUsername } = args.input;
+
+      // we find the user in the list
+      const user = UserList.find((user) => user.id === Number(id));
+
+      // we update the username
+      user.username = newUsername;
 
       return user;
     },
-    // updateUser: we update the username of a user
-    updateUser: (parent, args) => {
-      // we destructure the input object
-      const { id, newUsername } = args.input;
-      let userUpdated;
+    // deleteUser: we delete a user from the list
+    deleteUser: (parent, args) => {
+      const id = args.id;
 
-      // we find the user in the list and update the username
-      UserList.forEach((user) => {
-        if (user.id === Number(id)) {
-          user.username = newUsername;
-          userUpdated = user;
-        }
-      });
-
-      return userUpdated;
+      // remove the user from the list
+      _.remove(UserList, (user) => user.id === Number(id));
+      return null;
     },
   },
 };
