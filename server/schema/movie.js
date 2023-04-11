@@ -10,7 +10,7 @@ const typeDefs = gql`
 
   type Query {
     movies: [Movie]!
-    movie(id: ID!): Movie!
+    movie(title: String!): Movie!
   }
 `;
 

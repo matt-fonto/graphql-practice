@@ -17,8 +17,8 @@ export default function Movies() {
 
           return (
             <ul>
-              <li>{title}</li>
-              <li>{yearOfPublication}</li>
+              <li>Title: {title}</li>
+              <li>Year of Publication: {yearOfPublication}</li>
             </ul>
           );
         })}

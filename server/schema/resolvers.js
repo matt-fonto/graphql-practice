@@ -21,7 +21,9 @@ const resolvers = {
       return MovieList;
     },
     movie: (parent, args) => {
-      return MovieList.find((movie) => movie.id === Number(args.id));
+      const title = args.title;
+      const movie = _.find(MovieList, { title });
+      return movie;
     },
   },
   //USER RESOLVERS

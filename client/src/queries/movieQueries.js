@@ -12,4 +12,17 @@ const GET_MOVIES = gql`
   }
 `;
 
-export { GET_MOVIES };
+const GET_MOVIE = gql`
+  # queryName($variableName: variableType!)
+  query getMovie($title: String!) {
+    # fieldName(variableName: $variableName
+    # $title is the variable we are passing in
+    movie(title: $title) {
+      id
+      title
+      yearOfPublication
+    }
+  }
+`;
+
+export { GET_MOVIES, GET_MOVIE };
