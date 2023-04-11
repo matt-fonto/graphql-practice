@@ -10,7 +10,7 @@ const UserList = [
         id: 2,
         name: "Matt",
         username: "MattFonto",
-        age: 20,
+        age: 26,
         nationality: "BRAZIL",
       },
       {
@@ -26,7 +26,7 @@ const UserList = [
     id: 2,
     name: "Matt",
     username: "MattFonto",
-    age: 20,
+    age: 26,
     nationality: "BRAZIL",
   },
   {
@@ -40,7 +40,7 @@ const UserList = [
         id: 2,
         name: "Matt",
         username: "MattFonto",
-        age: 20,
+        age: 26,
         nationality: "BRAZIL",
       },
     ],

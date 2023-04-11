@@ -9,6 +9,7 @@ import {
 import Users from "./Users";
 import Movies from "./Movies";
 import SearchMovie from "./SearchMovie";
+import CreateUser from "./CreateUser";
 
 // ApolloCLient: it is a class that we can use to make requests to our GraphQL API
 // InMemoryCache: we cache the data in memory, so it is temporary storage for data that is frequently accessed
@@ -34,6 +35,7 @@ function App() {
         <div>
           <h1>List of users</h1>
           <Users />
+          <CreateUser />
 
           <h1>List of Movies</h1>
           <Movies />
